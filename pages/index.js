@@ -10,15 +10,12 @@ import Link from "next/link";
 //Custom hooks or apiCall
 import { allPost } from "./api";
 
-export default function Dashboard() {
-  const [postData, setPostData] = useState([]);
+export async function getServerSideProps() {
+  const posts = await allPost();
+  return { props: { posts: posts.data } };
+}
 
-  useEffect(() => {
-    allPost().then((res) => {
-      setPostData(res.data);
-    });
-  }, []);
-
+export default function Dashboard({ posts }) {
   return (
     <>
       <Head>
@@ -34,7 +31,7 @@ export default function Dashboard() {
         }}
         style={{ margin: "2rem" }}
         active
-        loading={!postData}
+        loading={!posts}
       >
         <Layout className={styles.dashboardWrapper}>
           <Space
@@ -42,7 +39,7 @@ export default function Dashboard() {
             size={24}
             className={styles.dashboardContent}
           >
-            {postData?.map((post) => (
+            {posts?.map((post) => (
               <Link key={post.id} href={`/detail/${post.id}`}>
                 <Card title={post.title} className={styles.dashboardPost}>
                   <p>{post?.body}</p>

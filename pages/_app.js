@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import Navbar from "./navbar/index.js";
+import Navbar from "../components/navbar.js";
 import { useEffect, useState } from "react";
 import { allPost } from "./api/index.js";
 
