@@ -1,5 +1,5 @@
 import axios from "axios";
-import { statusMessage } from "pages/hooks";
+import { statusMessage } from "pages/hooks/message";
 
 export const allPost = async () => {
   const res = await axios.get(`https://jsonplaceholder.typicode.com/posts`);
