@@ -5,16 +5,7 @@ import styles from "@/styles/detail.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import {
-  Button,
-  Input,
-  Space,
-  Col,
-  Typography,
-  Modal,
-  message,
-  Skeleton,
-} from "antd";
+import { Button, Input, Space, Col, Typography, Modal, Skeleton } from "antd";
 
 //Icons
 import {

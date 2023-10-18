@@ -28,7 +28,7 @@ export default function Dashboard({ allPosts }) {
           </Text>
         </div>
         <div className={styles.navbarUserInfo}>
-          <Badge count={allPosts.length} offset={[10, -9]}>
+          <Badge count={allPosts?.length} offset={[10, -9]}>
             Posts
           </Badge>
           <IoMdNotifications className={styles.navbarIcons} />

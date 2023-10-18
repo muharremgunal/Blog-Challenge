@@ -3,8 +3,7 @@ import { Button, Input, Space, Col, Typography, message } from "antd";
 import { PlusOutlined, ArrowLeftOutlined } from "@ant-design/icons";
 import Link from "next/link";
 import { useState } from "react";
-
-import { createPost } from "../api";
+import { createPost } from "@/pages/api";
 
 const { TextArea } = Input;
 const { Text } = Typography;
