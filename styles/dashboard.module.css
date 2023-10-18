@@ -1,0 +1,77 @@
+.dashboardWrapper {
+  width: 100%;
+}
+
+.dashboardContent {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 50px;
+}
+
+.dashboardPost {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.19);
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+}
+
+.dashboardPost:hover {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.19);
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-color: rgb(67, 67, 240);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  width: 100%;
+  height: 80px;
+  padding-right: 40px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media screen and (min-width: 393px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    height: 80px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+.navbarLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbarIcons {
+  width: 30px;
+  height: 30px;
+}
+
+.navbarUserInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .navbarUserInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
